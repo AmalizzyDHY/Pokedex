@@ -1,8 +1,7 @@
 import pandas as pd
 
 # 1. Charger la base
-df = pd.read_csv('data/pokemon_data.csv')
-
+df = pd.read_csv('pokemon_data.csv')
 # 2. Vérifier les types et les manquants
 print("--- Vérification des colonnes ---")
 print(df.info()) # Montre si les colonnes sont bien des nombres ou du texte
