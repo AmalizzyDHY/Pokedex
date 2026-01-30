@@ -28,7 +28,7 @@ def traitementDB():
             pokedex.append(new_pokemon)
         
         # print(type(pokedex))
-        print("Test")
+        print("Template")
         pokedex[0].show() # On affiche pour être sûr
         print("\n")
         # print(pokedex[58])

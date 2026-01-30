@@ -5,6 +5,11 @@ import random
 pokedex = traitementDB()
 possibilite_pkmn = pokedex.copy()
 
+def restart_game():
+    pokedex = traitementDB()
+    global possibilite_pkmn
+    possibilite_pkmn = pokedex.copy()
+
 # Fonction pour voir si le pokemon est possible ou non, selon le dernier retour du la dernier proposition
 def is_compatible(pokemon, guess, feedback):
     """
