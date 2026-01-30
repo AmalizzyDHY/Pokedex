@@ -5,7 +5,7 @@ import csv
 def traitementDB():
     print("Dossier courant :", os.getcwd()) # Pour savoir où on est
     print("Contenu du dossier :", os.listdir()) # Pour savoir ce qu'il y a avec nous
-
+    print("\n")
     
     # print("poulpe")
     pokedex = [] # array
@@ -28,6 +28,7 @@ def traitementDB():
             pokedex.append(new_pokemon)
         
         # print(type(pokedex))
+        print("Test")
         pokedex[0].show() # On affiche pour être sûr
         print("\n")
         # print(pokedex[58])
