@@ -10,6 +10,7 @@ def game():
     # choix du pokemon "mystère"
     n_pkmn_mystere = random.randint(1, 1025) # On choisis un numéro entre 1 et 1025, ce qui choisis le numéro du pokemon "mystère"
     pokedex[n_pkmn_mystere].show()
+    print("\n")
 
     while not win:
         # L'utilisateur choisis un pokemon, pour deviner le pokemon mystère
@@ -17,16 +18,19 @@ def game():
         # print(pokedex[n_pkmn_guest])
 
         if n_pkmn_guest == n_pkmn_mystere :
-            print("Tu as gagner ! C'était bien " + str(pokedex[n_pkmn_mystere].get_name()))
+            print("Tu as gagner ! C'était bien " + str(pokedex[n_pkmn_mystere].get_name()) + "\n")
             win = 1
         else :
-            print("Essaie encore")
+            print("Sorry... Try again !")
             
             # Indice pour savoir si on augmente ou descent
-            if(pokedex[n_pkmn_guest].get_id() <= pokedex[n_pkmn_mystere].get_id()):
-                indice_id = "More"
+            if(pokedex[n_pkmn_guest].get_id() == pokedex[n_pkmn_mystere].get_id()):
+                indice_id = "True"
             else:
-                indice_id = "Less"
+                if(pokedex[n_pkmn_guest].get_id() <= pokedex[n_pkmn_mystere].get_id()):
+                    indice_id = "More"
+                else:
+                    indice_id = "Less"
 
             # Indice pour savoir le type1 du pokemon
             if(pokedex[n_pkmn_guest].get_type1() == pokedex[n_pkmn_mystere].get_type1()):
@@ -47,22 +51,31 @@ def game():
                     indice_type2 = "False"
 
             # Indice pour savoir le height du pokemon
-            if(pokedex[n_pkmn_guest].get_height() <= pokedex[n_pkmn_mystere].get_height()):
-                indice_height = "More"
+            if(pokedex[n_pkmn_guest].get_height() == pokedex[n_pkmn_mystere].get_height()):
+                indice_height = "True"
             else:
-                indice_height = "Less"
+                if(pokedex[n_pkmn_guest].get_height() <= pokedex[n_pkmn_mystere].get_height()):
+                    indice_height = "More"
+                else:
+                    indice_height = "Less"
             
             # Indice pour savoir le weight du pokemon
-            if(pokedex[n_pkmn_guest].get_weight() <= pokedex[n_pkmn_mystere].get_weight()):
-                indice_weight = "More"
+            if(pokedex[n_pkmn_guest].get_weight() == pokedex[n_pkmn_mystere].get_weight()):
+                indice_weight = "True"
             else:
-                indice_weight = "Less"
+                if(pokedex[n_pkmn_guest].get_weight() <= pokedex[n_pkmn_mystere].get_weight()):
+                    indice_weight = "More"
+                else:
+                    indice_weight = "Less"
 
             # Indice pour savoir si on augmente ou descent pour la generation
-            if(pokedex[n_pkmn_guest].get_gen() <= pokedex[n_pkmn_mystere].get_gen()):
-                indice_gen = "More"
+            if(pokedex[n_pkmn_guest].get_gen() == pokedex[n_pkmn_mystere].get_gen()):
+                indice_gen = "True"
             else:
-                indice_gen = "Less"
+                if(pokedex[n_pkmn_guest].get_gen() <= pokedex[n_pkmn_mystere].get_gen()):
+                    indice_gen = "More"
+                else:
+                    indice_gen = "Less"
 
             print("ID               : " + str(pokedex[n_pkmn_guest].get_id()) + " - " + indice_id)
             print("Name             : " + str(pokedex[n_pkmn_guest].get_name()) + " - " + str(pokedex[n_pkmn_guest].get_name() == pokedex[n_pkmn_mystere].get_name()))
@@ -71,4 +84,5 @@ def game():
             print("Height Meters    : " + str(pokedex[n_pkmn_guest].get_height()) + " - " + indice_height)
             print("Weight Kilograms : " + str(pokedex[n_pkmn_guest].get_weight()) + " - " + indice_weight)
             print("Generation       : " + str(pokedex[n_pkmn_guest].get_gen()) + " - " + indice_gen)
+            print("\n")
         
