@@ -1,14 +1,14 @@
 from pokemon import Pokemon
+from pokedle import game
 
+def main():
 
-Caninos = Pokemon("Caninos", 58, 0.7, 19, "Feu", "Aucun", 1)
+    new_game = input("Do you want play ? [y/n/stop] ")
 
-Caninos.get_id()
-Caninos.get_name()
-Caninos.get_type1()
-Caninos.get_type2()
-Caninos.get_height()
-Caninos.get_weight()
-Caninos.get_gen()
+    while(new_game != "stop"):
+        new_game = input("Do you want play again ? [y/n/stop] ")
 
-Caninos.show()
+        if ( new_game == "y" ) :
+            game()
+    
+main()
