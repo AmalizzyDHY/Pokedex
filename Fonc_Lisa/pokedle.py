@@ -102,14 +102,14 @@ def game_ia():
     pokedex = traitementDB()
     win = 0
 
+    # On fait ça pour remettre à zéro la liste de possibilité
+    restart_game()
+
     # choix du pokemon "mystère"
     n_pkmn_mystere = random.randint(1, 1025) # On choisis un numéro entre 1 et 1025, ce qui choisis le numéro du pokemon "mystère"
     print("Pokemon Mystère")
     pokedex[n_pkmn_mystere].show()
     print("\n")
-
-    # On fait ça pour remettre à zéro la liste de possibilité
-    restart_game()
 
     while not win:
         # L'IA choisis un pokemon, pour deviner le pokemon mystère
@@ -305,20 +305,29 @@ def game_1via():
     pokedex = traitementDB()
     win = 0
     play = 0
+    
+    # On fait ça pour remettre à zéro la liste de possibilité
+    restart_game()
+
     # choix du pokemon "mystère"
     n_pkmn_mystere = random.randint(1, 1025) # On choisis un numéro entre 1 et 1025, ce qui choisis le numéro du pokemon "mystère"
     print("Pokemon Mystère")
     pokedex[n_pkmn_mystere].show()
     print("\n")
 
-    # On fait ça pour remettre à zéro la liste de possibilité
-    restart_game()
+    print("Player 1 : You")
+    print("Player 2 : IA")
+    print("\n")
 
     while not win:
 
         print("Turn Player " + str((play%2)+1))
         # L'utilisateur choisis un pokemon, pour deviner le pokemon mystère
-        n_pkmn_guest = int(input("Try : "))
+        if ( (play%2)+1 == 1):
+            n_pkmn_guest = int(input("Try : "))
+        else:
+            n_pkmn_guest = int(choose_next_guess())
+            print("Try : " + str(n_pkmn_guest))
         # print(pokedex[n_pkmn_guest])
 
         if n_pkmn_guest == n_pkmn_mystere :
@@ -405,6 +414,7 @@ def game_1via():
                     print("Generation       : " + str(pokedex[n_pkmn_guest].get_gen()) + " - " + indice_gen)
                     print("\n")
 
+                    update_possible_pokemons(pokedex[n_pkmn_guest], feedback)
                     play += 1
 
                 else:
