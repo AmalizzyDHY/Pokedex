@@ -1,4 +1,5 @@
 from Fonc_Lisa.main import main as l_main
+from Fonc_Sam.main import main as s_main
 
 def poulpe():
     
