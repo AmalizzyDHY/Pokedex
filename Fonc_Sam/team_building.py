@@ -1,8 +1,8 @@
-from .collections import Counter
+from collections import Counter
 from .pokemon import Pokemon
 from .analyse_pokemon import weaknesses, resistance, immunities
 from .data_loader import get_pokemon
-from .typing import List
+from typing import List
 
 import random
 
