@@ -42,7 +42,6 @@ set_mult("Normal", ["Ghost"], 0.0)
 
 # Fire
 set_mult("Fire", ["Grass", "Ice", "Bug", "Steel"], 2.0)
-set_mult("Fire", ["Fire", "Water", "Rock", "Dragon"], 0.5)
 
 # Water
 set_mult("Water", ["Fire", "Ground", "Rock"], 2.0)
@@ -51,7 +50,6 @@ set_mult("Water", ["Water", "Grass", "Dragon"], 0.5)
 # Electric
 set_mult("Electric", ["Water", "Flying"], 2.0)
 set_mult("Electric", ["Electric", "Grass", "Dragon"], 0.5)
-set_mult("Electric", ["Ground"], 0.0)
 
 # Grass
 set_mult("Grass", ["Water", "Ground", "Rock"], 2.0)
