@@ -1,6 +1,6 @@
-from pokemon import Pokemon
-from traitement_db import traitementDB
-from ai import choose_next_guess, update_possible_pokemons, restart_game
+from .pokemon import Pokemon
+from .traitement_db import traitementDB
+from .ai import choose_next_guess, update_possible_pokemons, restart_game
 import random
 
 def game_solo():

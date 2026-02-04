@@ -1,5 +1,4 @@
-from pokemon import Pokemon
-from pokedle import game_solo, game_ia, game_1v1, game_1via
+from .pokedle import game_solo, game_ia, game_1v1, game_1via
 
 def main():
 
@@ -23,4 +22,5 @@ def main():
         
     print("Bye bye !")
     
-main()
+if __name__ == "__main__":
+    main()

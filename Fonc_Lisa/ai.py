@@ -1,5 +1,5 @@
-from pokemon import Pokemon
-from traitement_db import traitementDB
+from .pokemon import Pokemon
+from .traitement_db import traitementDB
 import random
 
 pokedex = traitementDB()

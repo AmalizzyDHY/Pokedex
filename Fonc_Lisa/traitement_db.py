@@ -1,4 +1,4 @@
-from pokemon import Pokemon
+from .pokemon import Pokemon
 import os
 import csv
 
