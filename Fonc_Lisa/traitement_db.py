@@ -20,7 +20,7 @@ def traitementDB():
             type1 = ligne[36]
             type2 = ligne[37]
             if ( type2 == ""):
-                type2 = "Aucun"
+                type2 = "None"
             height = ligne[28]
             weight = ligne[30]
             gen = ligne[40]

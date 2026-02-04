@@ -10,7 +10,7 @@ def game_solo():
 
     # choix du pokemon "mystère"
     n_pkmn_mystere = random.randint(1, 1025) # On choisis un numéro entre 1 et 1025, ce qui choisis le numéro du pokemon "mystère"
-    print("Pokemon Mystère")
+    print("Mystery Pokemon")
     pokedex[n_pkmn_mystere].show()
     print("\n")
 
@@ -107,7 +107,7 @@ def game_ia():
 
     # choix du pokemon "mystère"
     n_pkmn_mystere = random.randint(1, 1025) # On choisis un numéro entre 1 et 1025, ce qui choisis le numéro du pokemon "mystère"
-    print("Pokemon Mystère")
+    print("Mystery Pokemon")
     pokedex[n_pkmn_mystere].show()
     print("\n")
 
@@ -207,7 +207,7 @@ def game_1v1():
     play = 0
     # choix du pokemon "mystère"
     n_pkmn_mystere = random.randint(1, 1025) # On choisis un numéro entre 1 et 1025, ce qui choisis le numéro du pokemon "mystère"
-    print("Pokemon Mystère")
+    print("Mystery Pokemon")
     pokedex[n_pkmn_mystere].show()
     print("\n")
 
@@ -311,7 +311,7 @@ def game_1via():
 
     # choix du pokemon "mystère"
     n_pkmn_mystere = random.randint(1, 1025) # On choisis un numéro entre 1 et 1025, ce qui choisis le numéro du pokemon "mystère"
-    print("Pokemon Mystère")
+    print("Mystery Pokemon")
     pokedex[n_pkmn_mystere].show()
     print("\n")
 
