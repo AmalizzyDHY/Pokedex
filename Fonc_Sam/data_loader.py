@@ -1,5 +1,5 @@
 import pandas as pd
-from pokemon import Pokemon
+from .pokemon import Pokemon
 
 
 def load_dataframe(path: str) -> pd.DataFrame:

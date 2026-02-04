@@ -1,5 +1,5 @@
-from type_chart import TYPES, multiplier
-from pokemon import Pokemon
+from .type_chart import TYPES, multiplier
+from .pokemon import Pokemon
 
 
 

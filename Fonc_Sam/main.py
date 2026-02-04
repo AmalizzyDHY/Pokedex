@@ -1,8 +1,8 @@
-from matchup import compare
-from team_building import random_team, team_weakness_counts
-from data_loader import load_dataframe, get_pokemon
-from analyse_pokemon import weaknesses, resistance, immunities
-from type_chart import multiplier
+from .matchup import compare
+from .team_building import random_team, team_weakness_counts
+from .data_loader import load_dataframe, get_pokemon
+from .analyse_pokemon import weaknesses, resistance, immunities
+from .type_chart import multiplier
 import random
 
 

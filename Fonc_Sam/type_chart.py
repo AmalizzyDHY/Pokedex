@@ -1,4 +1,4 @@
-from pokemon import Pokemon
+from .pokemon import Pokemon
 
 # Liste officielle des types Pokémon
 TYPES = [

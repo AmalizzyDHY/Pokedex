@@ -1,7 +1,7 @@
-from typing import Tuple
-from pokemon import Pokemon
-from type_chart import multiplier
-from analyse_pokemon import weaknesses, resistance, immunities
+from .typing import Tuple
+from .pokemon import Pokemon
+from .type_chart import multiplier
+from .analyse_pokemon import weaknesses, resistance, immunities
 
 
 
