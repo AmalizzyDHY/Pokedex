@@ -15,11 +15,13 @@ def poulpe():
     while(choice != "bye"):
         if ( choice == "1" ):
             print("Let's go for : Create Team !")
+            random_team()
         if ( choice == "2" ):
             print("Let's go for : Matchup !")
-            random_matchup()
+            random_matchup(random_team())
         if ( choice == "3" ):
             print("Let's go for : Team Battle")
+            team_vs_team()
         if ( choice == "4"):
             print("Let's go for : Pokedle !")
             l_main()
