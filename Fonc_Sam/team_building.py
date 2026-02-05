@@ -3,6 +3,12 @@ from .pokemon import Pokemon
 from .analyse_pokemon import weaknesses, resistance, immunities
 from .data_loader import get_pokemon
 from .typing import List
+from collections import Counter
+from pokemon import Pokemon
+from analyse_pokemon import weaknesses, resistance, immunities
+from data_loader import get_pokemon
+from typing import List
+from data_loader import load_dataframe
 
 import random
 
@@ -18,7 +24,8 @@ def team_weakness_counts(team):
     return counts
 
 
-def random_team(df, size=6, weak_limit=2):
+def random_team(size=6, weak_limit=2):
+    df = load_dataframe("database/pokemon_data.csv")
     """
     Génère une équipe aléatoire en évitant les doublons de faiblesses.
     """
