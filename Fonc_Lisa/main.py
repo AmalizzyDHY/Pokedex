@@ -1,8 +1,9 @@
 from .pokedle import game_solo, game_ia, game_1v1, game_1via
+from .donnee_supp import graph
 
 def main():
 
-    new_game = input("Do you want play ? [solo/1v1/1via/ia/stop] ")
+    new_game = input("Do you want play ? [graph/solo/1v1/1via/ia/stop] ")
 
     while(new_game != "stop"):
 
@@ -18,7 +19,10 @@ def main():
         if ( new_game == "1via" ) :
             game_1via()
 
-        new_game = input("Do you want play again ? [solo/1v1/1via/ia/stop] ")
+        if ( new_game == "graph" ) :
+            graph()
+
+        new_game = input("Do you want play again ? [graph/solo/1v1/1via/ia/stop] ")
         
     print("Bye bye !")
     

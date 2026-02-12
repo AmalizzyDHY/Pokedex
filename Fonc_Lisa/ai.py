@@ -9,6 +9,7 @@ def restart_game():
     pokedex = traitementDB()
     global possibilite_pkmn
     possibilite_pkmn = pokedex.copy()
+    possibilite_pkmn.pop(0)
 
 # Fonction pour voir si le pokemon est possible ou non, selon le dernier retour du la dernier proposition
 def is_compatible(pokemon, guess, feedback):

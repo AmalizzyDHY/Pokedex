@@ -123,6 +123,8 @@ def game_ia():
             print("You win ! It was : " + str(pokedex[n_pkmn_mystere].get_name()) + "\n")
             print("You found it in " + str(turn) + " tries ! ")
             win = 1
+
+            return turn
         else :
             print("Sorry... Try again !")
             
