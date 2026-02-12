@@ -101,6 +101,7 @@ def game_ia():
 
     pokedex = traitementDB()
     win = 0
+    turn = 0
 
     # On fait ça pour remettre à zéro la liste de possibilité
     restart_game()
@@ -112,6 +113,7 @@ def game_ia():
     print("\n")
 
     while not win:
+        turn += 1
         # L'IA choisis un pokemon, pour deviner le pokemon mystère
         n_pkmn_guest = int(choose_next_guess())
         print("Try : " + str(n_pkmn_guest))
@@ -119,6 +121,7 @@ def game_ia():
 
         if n_pkmn_guest == n_pkmn_mystere :
             print("You win ! It was : " + str(pokedex[n_pkmn_mystere].get_name()) + "\n")
+            print("You found it in " + str(turn) + " tries ! ")
             win = 1
         else :
             print("Sorry... Try again !")
@@ -305,7 +308,25 @@ def game_1via():
     pokedex = traitementDB()
     win = 0
     play = 0
-    
+    difficulte = 0;
+
+    # Choisir la difficulte de l'ia
+    print("1 - Easy/n")
+    print("2 - Medium/n")
+    print("3 - Hard/n")
+    difficulte = int(input("Choose your difficulty level ! [1/2/3] "))
+
+    if difficulte == 1:
+        print("Easy mode")
+    else:
+        if difficulte == 2:
+            print("Medium mode")
+        else:
+            if difficulte == 3:
+                print("Hard mode")
+            else:
+                print("Default : mode medium")
+                difficulte = 2
     # On fait ça pour remettre à zéro la liste de possibilité
     restart_game()
 
@@ -414,8 +435,16 @@ def game_1via():
                     print("Generation       : " + str(pokedex[n_pkmn_guest].get_gen()) + " - " + indice_gen)
                     print("\n")
 
-                    update_possible_pokemons(pokedex[n_pkmn_guest], feedback)
                     play += 1
+
+                    if difficulte == 3:
+                        update_possible_pokemons(pokedex[n_pkmn_guest], feedback)
+                    if difficulte == 2:
+                        if ( (play%2)+1 == 0):
+                            update_possible_pokemons(pokedex[n_pkmn_guest], feedback)
+                    if difficulte == 1:
+                        pass
+                        # do nothing
 
                 else:
                     print("ID of Pokemon start at 1 !\n")
