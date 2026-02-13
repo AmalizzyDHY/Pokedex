@@ -1,0 +1,33 @@
+Hello, you are here in the info.txt for Lisa's feature.
+
+The feature implemented here was a pokedle.
+
+First, I will explain what a pokedle is. Then I will explain how to play and finally the different game modes.
+
+What is a Pokedle?
+First of all, are you familiar with Wordle? It is a game where you have to find a 5-letter word. The only clues we have are 3 colours to tell us whether or not the letters in our suggestions match the word we are looking for.
+Pokedle uses the same principle: finding a Pokémon based on its characteristics. To do this, we have the following information: name, ID, height, weight, type1, type2, gen.
+After each suggestion, you will receive information about the mystery Pokémon. For example, if it has the same type, it will say ‘true’.
+
+Example:
+ID               : 333 - Less
+Name             : Swablu - False
+Type 1           : Normal - False
+Type 2           : Flying - False
+Height Meters    : 0.4 - True
+Weight Kilograms : 1.2 - More
+Generation       : 3 - True
+
+How to play and install?
+First, you must have Python installed.
+I use several modules that you must install before playing, such as:
+- random
+- matplotlib.pyplot
+- csv
+
+Different game modes!
+There are several game modes: game_solo, game_ia, game_1v1, game_1via, and another feature to display a graph to see the effectiveness of the implemented AI.
+game_solo: corresponds to the game where you are the only player.
+game_ia: corresponds to the game where only the implemented AI plays; it is from this game mode that the graph is created.
+game_1v1: corresponds to the game where there are two players.
+game_1via: corresponds to the game where you play against the AI; there are several levels to choose from for difficulty.

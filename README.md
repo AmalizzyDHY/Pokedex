@@ -70,8 +70,18 @@ To install our project correctly.
 First, you must have Python installed on your machine.
 
 Then you need the following modules:
-- panda
+- pandas
+- random
 - csv
+- numpy
+- scikit-learn
+- plotly
+- atplotlib
+- opencv-python
+- pillow
+- tqdm
+- torch
+- torchvision
 
 Next, you must git clone our project so that it is on your computer.
 Finally, the main menu is located in poulpe.py. Just launch the programme to use Samuel and Lisa's features.

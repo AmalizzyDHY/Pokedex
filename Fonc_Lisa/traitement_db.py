@@ -1,5 +1,4 @@
 from .pokemon import Pokemon
-import os
 import csv
 
 def traitementDB():
