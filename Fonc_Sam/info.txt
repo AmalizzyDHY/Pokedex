@@ -1,0 +1,86 @@
+1) DESCRIPTION
+
+    This project is a Pokémon simulator developed in Python.
+    It allows you to:
+    - load a Pokémon dataset from a CSV file,
+    - represent Pokémon as objects (Pokémon class),
+    - calculate type effectiveness (multipliers),
+    - analyse weaknesses, resistances and immunities,
+    - compare two Pokémon (matchup) with a score and an explanation,
+    - generate random teams by limiting weaknesses,
+    - simulate ‘Team vs Team’ battles (1v1 matches by position).
+
+2) TECHNICAL OBJECTIVES
+
+- Data manipulation via pandas (CSV -> DataFrame)
+    - Modular programming (multiple files, separate responsibilities)
+    - Object-oriented programming (Pokémon class)
+        - Implementation of a type efficiency table (type chart)
+    - Error handling (Pokémon not found, missing column, etc.)
+    - Controlled random generation (constraints on weaknesses)
+
+3) FEATURES
+
+    A) Dataset
+        - CSV file reading
+        - Column cleaning (strip)
+        - Type 2 management (empty values -> ‘None’)
+
+    B) Pokémon analysis
+        - Weaknesses: types inflicting x2 or more
+        - Resistances: types that deal x0.5 or less damage (excluding immunities)
+        - Immunities: types that deal x0 damage
+
+    C) Matchup (1 vs 1)
+        - Calculation of the best possible offensive type
+        - Calculation of the greatest opposing threat
+        - Final score based on attack + defence (bonus/penalty)
+                - Verdict: advantage A / advantage B / balanced match
+        - Detailed explanation displayed
+
+    D) Team Building
+        - Random team generation (6 Pokémon by default)
+        - Weakness control: limit on identical weaknesses (weak_limit)
+                - Display of overall team weaknesses
+
+    E) Team vs Team
+        - Generation of a Team B different from Team A
+        - Match-by-match comparison (slot 1 vs slot 1, etc.)
+        - Final score: Team A victory / Team B victory / draw
+
+4) PROJECT STRUCTURE
+
+    - pokemon.py
+        Pokemon class (name, type1, type2)
+
+        - type_chart.py
+        List of official types + TYPE_CHART table + multiplier() function
+
+    - analyse_pokemon.py
+        Functions: weaknesses(), resistance(), immunities()
+
+    - matchup.py
+        Functions: best_offense(), worst_threat(), matchup_score(), compare()
+
+        - data_loader.py
+        Functions: load_dataframe(), get_pokemon()
+
+    - team_building.py
+        Functions: random_team(), team_weakness_counts()
+
+    - main.py
+        Entry point: random_matchup(), team generation, Team vs Team
+
+5) HOW TO RUN THE PROGRAM
+
+    1) Install Python 3
+    2) Install pandas: pip install pandas
+    3) Check the path to the CSV dataset in the code:
+    Example used: Fonc_Sam\database\pokemon_data.csv
+    4) Run: python main.py
+
+6) IMPORTANT PARAMETERS
+
+    - size: team size (default 6)
+    - weak_limit: maximum number of Pokémon sharing the same weakness (default 2)
+    - margin (matchup.py): margin to avoid a verdict based on too small a difference
